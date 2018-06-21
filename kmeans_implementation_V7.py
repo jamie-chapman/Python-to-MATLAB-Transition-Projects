@@ -20,14 +20,12 @@ def main():
     size = 200;
     x1 = np.random.normal(mu, sigma, size)
     y1 = np.random.normal(mu, sigma, size)
-    z1 = np.random.normal(mu, sigma, size)
 
     x2 = np.random.normal(mu+0.8, sigma, size)
     y2 = np.random.normal(mu+0.8, sigma, size)
-    z2 = np.random.normal(mu+0.8, sigma, size)
 
     #Concat as single point cloud
-    points = np.array([np.concatenate([x1, x2], axis=0), np.concatenate([y1, y2], axis=0), np.concatenate([z1, z2], axis=0), np.zeros(size * 2)])
+    points = np.array([np.concatenate([x1, x2], axis=0), np.concatenate([y1, y2], axis=0), np.zeros(size * 2)])
 
     #Select number of means
     k = 3
