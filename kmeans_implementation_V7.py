@@ -18,6 +18,7 @@ def main():
     mu, sigma = 1, 0.5 #mean and std dev
 
     size = 200;
+<<<<<<< HEAD
     x1 = np.random.normal(mu-1, sigma, size)
     y1 = np.random.normal(mu+1, sigma, size)
 
@@ -30,6 +31,13 @@ def main():
     plt.plot(x2, y2, 'b.')
     plt.figure(0)
     plt.show(block=False)
+=======
+    x1 = np.random.normal(mu, sigma, size)
+    y1 = np.random.normal(mu, sigma, size)
+
+    x2 = np.random.normal(mu+0.8, sigma, size)
+    y2 = np.random.normal(mu+0.8, sigma, size)
+>>>>>>> ae3c63329753b5419ec27a7e4907161650c8accc
 
     #Concat as single point cloud
     points = np.array([np.concatenate([x1, x2], axis=0), np.concatenate([y1, y2], axis=0), np.zeros(size * 2)])
